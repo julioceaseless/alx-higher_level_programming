@@ -9,6 +9,10 @@ if __name__ == "__main__":
     a = int(argv[1])
     b = int(argv[3])
 
+    if argv[2] not in ["+", "-", "*", "/"]:
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
+
     if argv[2] == "+":
         result = a + b
         print("{:d} {} {:d} = {:d}".format(a, argv[2], b, result))
@@ -23,6 +27,3 @@ if __name__ == "__main__":
             exit(1)
         result = a / b
         print("{:d} {} {:d} = {:.2f}".format(a, argv[2], b, result))
-    else:
-        print("Unknown operator. Available operators: +, -, * and /")
-        exit(1)
