@@ -11,16 +11,16 @@ if __name__ == "__main__":
 
     if argv[2] == "+":
         result = a + b
-        print("{:d} + {:d} = {:d}".format(a, b, result))
+        print("{} + {} = {}".format(a, b, result))
     elif argv[2] == "-":
         result = a - b
-        print("{:d} - {:d} = {:d}".format(a, b, result))
+        print("{} - {} = {}".format(a, b, result))
     elif argv[2] == "*":
         result = a * b
-        print("{:d} * {:d} = {:d}".format(a, b, result))
+        print("{} * {} = {}".format(a, b, result))
     elif argv[2] == "/":
         result = a / b
-        print("{:d} / {:d} = {:.2f}".format(a, b, result))
+        print("{} / {} = {}".format(a, b, result))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
