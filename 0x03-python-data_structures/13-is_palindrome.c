@@ -8,11 +8,11 @@
  * @head: head pointer or pointer to the starting position
  * Return: returns the new first node
  */
-listint_t *reverseList(listint_t *head)
+listint_t *reverseList(listint_t **head)
 {
-	listint_t *prev, *next = NULL;
-	listint_t *current = head;
+	listint_t *prev = NULL, *next = NULL, *current = NULL;
 
+	current = *head;
 	while (current != NULL)
 	{
 		next = current->next;
@@ -46,7 +46,7 @@ int is_palindrome(listint_t **head)
 	}
 
 	/* reverse the second half */
-	second_half = reverseList(slow->next);
+	second_half = reverseList(&slow->next);
 
 	/* compare first half with second half */
 	first_half = *head;
