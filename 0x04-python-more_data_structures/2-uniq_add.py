@@ -2,4 +2,7 @@
 
 
 def uniq_add(my_list=[]):
-    return set_1 & set_2
+    unique_list = set(my_list)
+    unique_list = list(unique_list)
+    sum_ = sum(unique_list)
+    return sum_
