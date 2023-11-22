@@ -18,4 +18,5 @@ class MagicClass:
     def area(self):
         return self._MagicClass__radius ** 2 * pi
 
-    dis.dis(MagicClass)
+
+dis.dis(MagicClass)
