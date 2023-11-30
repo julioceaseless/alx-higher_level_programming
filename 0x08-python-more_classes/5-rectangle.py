@@ -60,6 +60,7 @@ class Rectangle:
         to make it easy to use eval()
         """
         return ("Rectangle({}, {})".format(self.__width, self.__height))
+
     def __del__(self):
         """ print message when instance of Rectange is deleted """
         print("Bye rectangle...")
