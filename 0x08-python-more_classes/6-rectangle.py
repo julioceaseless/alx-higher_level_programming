@@ -5,8 +5,6 @@ class Rectangle defines a rectangle
 
 
 class Rectangle:
-    number_of_instances
-
     """ Initialize Rectangle with width and height"""
     def __init__(self, width=0, height=0):
         self.width = width
