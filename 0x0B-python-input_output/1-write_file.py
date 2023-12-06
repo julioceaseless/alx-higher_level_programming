@@ -4,9 +4,6 @@ Writes text to a file
 """
 
 
-import os
-
-
 def write_file(filename="", text=""):
     """
     this function writes text to a file and returns
