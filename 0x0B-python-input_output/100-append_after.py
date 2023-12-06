@@ -5,6 +5,10 @@ insert a line of text to a file
 
 
 def append_after(filename="", search_string="", new_string=""):
+    """
+    function inserts a line of text to a file,
+    after each line containing a specific string
+    """
     with open(filename) as my_file:
         file_lines = []
         for line in my_file:
