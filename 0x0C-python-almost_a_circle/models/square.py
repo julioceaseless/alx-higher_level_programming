@@ -19,6 +19,9 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """
+    class square
+    """
     def __init__(self, size, x=0, y=0, id=None):
         """
         Initializes a Square object.
@@ -50,7 +53,7 @@ class Square(Rectangle):
         **kwargs: Variable number of key-value pairs representing attributes.
         """
         if args:
-            if len(args) >= 1:
+            if len(args) > 0:
                 self.id = args[0]
             if len(args) >= 2:
                 self.size = args[1]
