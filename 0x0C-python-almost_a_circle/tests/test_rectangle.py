@@ -2,6 +2,7 @@
 import unittest
 from models.rectangle import Rectangle
 
+
 class TestRectangle(unittest.TestCase):
     def test_area(self):
         # Test the area calculation
@@ -28,6 +29,13 @@ class TestRectangle(unittest.TestCase):
         msg = "height must be > 0"
         self.assertEqual(str(err.exception), msg)
 
+    def test_zero(self):
+        # Test if the class handles negative values correctly
+        with self.assertRaises(ValueError) as err:
+            rect = Rectangle(0, 4)
+        msg = "width must be > 0"
+        self.assertEqual(str(err.exception), msg)
+
+
 if __name__ == '__main__':
     unittest.main()
-
