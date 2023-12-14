@@ -1,46 +1,39 @@
-# test_rectangle.py
+# test_square.py
 import unittest
-from models.rectangle import Rectangle
+from models.square import Square
 
 
-class TestRectangle(unittest.TestCase):
+class TestSquare(unittest.TestCase):
     def test_area(self):
         # Test the area calculation
-        rect = Rectangle(3, 4)
-        self.assertEqual(rect.area(), 12)
+        sqr = Square(3)
+        self.assertEqual(sqr.area(), 9)
 
     def test_initialization(self):
         # Test if the initialization is correct
-        rect = Rectangle(3, 4)
-        self.assertEqual(rect.width, 3)
-        self.assertEqual(rect.height, 4)
+        sqr = Square(3)
+        self.assertEqual(sqr.width, 3)
+        self.assertEqual(sqr.height, 3)
 
     def test_negative_values(self):
         # Test if the class handles negative values correctly
         with self.assertRaises(ValueError) as err:
-            rect = Rectangle(-3, 4)
+            sqr = Square(-3)
         msg = "width must be > 0"
         self.assertEqual(str(err.exception), msg)
 
     def test_negative_values(self):
         # Test if the class handles negative values correctly
         with self.assertRaises(ValueError) as err:
-            rect = Rectangle(3, -4)
-        msg = "height must be > 0"
-        self.assertEqual(str(err.exception), msg)
-
-    def test_zero(self):
-        # Test if the class handles negative values correctly
-        with self.assertRaises(ValueError) as err:
-            rect = Rectangle(0, 4)
+            sqr = Square(-4)
         msg = "width must be > 0"
         self.assertEqual(str(err.exception), msg)
 
     def test_zero(self):
         # Test if the class handles negative values correctly
         with self.assertRaises(ValueError) as err:
-            rect = Rectangle(4, 0)
-        msg = "height must be > 0"
+            square = Square(0)
+        msg = "width must be > 0"
         self.assertEqual(str(err.exception), msg)
 
 
