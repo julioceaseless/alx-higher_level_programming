@@ -4,6 +4,12 @@ from models.square import Square
 
 
 class TestSquare(unittest.TestCase):
+    def test_initialization(self):
+        # Test if the initialization is correct
+        sqr = Square(3)
+        self.assertEqual(sqr.width, 3)
+        self.assertEqual(sqr.height, 3)
+
     def test_area(self):
         # Test the area calculation
         size = [2, 3, 4]
@@ -12,11 +18,15 @@ class TestSquare(unittest.TestCase):
             sqr = Square(size[i])
             self.assertEqual(sqr.area(), area[i])
 
-    def test_initialization(self):
-        # Test if the initialization is correct
-        sqr = Square(3)
-        self.assertEqual(sqr.width, 3)
-        self.assertEqual(sqr.height, 3)
+    def test_x_value(self):
+        # Test the value of x
+        sqr = Square(3, 12)
+        self.assertEqual(sqr.x, 12)
+
+    def test_y_value(self):
+        # Test the value of y
+        sqr = Square(3, 1, 12)
+        self.assertEqual(sqr.y, 12)
 
     """ Test value types """
     def test_str_size_value(self):

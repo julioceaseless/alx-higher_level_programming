@@ -5,16 +5,36 @@ from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
-    def test_area(self):
-        # Test the area calculation
-        rect = Rectangle(3, 4)
-        self.assertEqual(rect.area(), 12)
-
     def test_initialization(self):
         # Test if the initialization is correct
         rect = Rectangle(3, 4)
         self.assertEqual(rect.width, 3)
         self.assertEqual(rect.height, 4)
+
+    def test_width(self):
+        # Test the value of width
+        rect = Rectangle(3, 4)
+        self.assertEqual(rect.width, 3)
+
+    def test_height(self):
+        # Test the value of height
+        rect = Rectangle(3, 4)
+        self.assertEqual(rect.height, 4)
+
+    def test_area(self):
+        # Test the area calculation
+        rect = Rectangle(3, 4)
+        self.assertEqual(rect.area(), 12)
+
+    def test_x_value(self):
+        # Test the value of x
+        rect = Rectangle(3, 4, 12)
+        self.assertEqual(rect.x, 12)
+
+    def test_y_value(self):
+        # Test the value of y
+        rect = Rectangle(3, 4, 1, 12)
+        self.assertEqual(rect.y, 12)
 
     """ Test negative values """
     def test_negative_width_value(self):
