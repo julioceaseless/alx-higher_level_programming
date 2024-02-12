@@ -10,7 +10,6 @@ if (args) {
     console.log(1);
   } else {
     argnums.sort();
-    console.log(argnums);
     console.log(secondLargest(argnums));
   }
 }
