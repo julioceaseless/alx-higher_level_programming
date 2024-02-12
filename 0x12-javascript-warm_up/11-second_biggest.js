@@ -4,10 +4,8 @@ const args = process.argv.slice(2);
 
 if (args) {
   const argnums = toInt(args);
-  if (argnums.length === 0) {
+  if (argnums.length < 2) {
     console.log(0);
-  } else if (argnums.length === 1) {
-    console.log(1);
   } else {
     argnums.sort();
     console.log(secondLargest(argnums));
