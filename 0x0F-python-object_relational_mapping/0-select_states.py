@@ -1,12 +1,15 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 import sys
 import MySQLdb
-
-mysql_user = sys.argv[1]
-mysql_passwd = sys.argv[2]
-mysql_db = sys.argv[3]
+"""
+Query MYSQL database via python
+"""
 
 if __name__ == "__main__":
+    mysql_user = sys.argv[1]
+    mysql_passwd = sys.argv[2]
+    mysql_db = sys.argv[3]
+
     conn = MySQLdb.connect(host="localhost", port=3306,
                            user=mysql_user, passwd=mysql_passwd,
                            db=mysql_db, charset="utf8")
