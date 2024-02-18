@@ -8,6 +8,7 @@ from the database
 import sys
 import MySQLdb
 
+
 def main(username, password, db_name):
     """Queries the database
 
