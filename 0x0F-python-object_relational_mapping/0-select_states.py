@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-import sys
-import MySQLdb
 """
 Query MYSQL database via python
 """
 
 
+import sys
+import MySQLdb
+
 if __name__ == "__main__":
+    """query database with MYSQL"""
     username, password, name = sys.argv[1:]
 
     conn = MySQLdb.connect(host="localhost", port=3306,
