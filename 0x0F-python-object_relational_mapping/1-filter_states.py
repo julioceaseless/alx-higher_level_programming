@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-import sys
-"""This module allows access to command line arguments"""
-import MySQLdb
-"""This modules allows connection to MySQL database"""
+"""
+list all states with a name starting with N (upper N)
+from the database
+"""
 
+
+import sys
+import MySQLdb
 
 def main(username, password, db_name):
     """Queries the database
