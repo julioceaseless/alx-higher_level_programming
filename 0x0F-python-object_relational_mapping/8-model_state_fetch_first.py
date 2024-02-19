@@ -20,5 +20,5 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     session = Session()
 
-    state = session.query(State).filter(State.id == 1).one_or_none()
+    state = session.query(State).first()
     print(f'{state.id}: {state.name}')
