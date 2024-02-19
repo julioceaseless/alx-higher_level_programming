@@ -5,6 +5,7 @@ Set up sql table with sqlalchemy
 
 
 from sqlalchemy import Column, Integer, String
+
 from sqlalchemy.ext.declarative import declarative_base
 
 
