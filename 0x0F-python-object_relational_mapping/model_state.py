@@ -1,12 +1,11 @@
 #!/usr/bin/python
 """
-Set up Alchemy to acccess MySQL database
+Set up sql table with sqlalchemy
 """
 
 
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
 
