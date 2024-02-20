@@ -21,13 +21,8 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     session = Session()
 
-    """ create a new  Louisiana state"""
-    louisiana = State(name='Louisiana')
-    session.add(louisiana)
-    session.commit()
-
     """query states and filter state.id = 2"""
-    state_object = session.query(State).filter(State.id == 2).first()
+    state_object = session.query(State).filter(State.id == 2).one()
     """rename state"""
     state_object.name = "New Mexico"
     session.commit()
