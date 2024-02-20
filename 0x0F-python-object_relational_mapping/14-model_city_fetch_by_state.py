@@ -23,8 +23,8 @@ if __name__ == "__main__":
     session = Session()
 
     """query database to retrieve objects"""
-    cities = session.query(City, State).\
-        join(State, City.state_id == State.id).\
+    cities = session.query(State, City).\
+        join(City, State.id == City.state_id).\
         order_by(City.id).all()
 
     for state, city in cities:
