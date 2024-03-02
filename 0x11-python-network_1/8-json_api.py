@@ -4,7 +4,6 @@ Script takes in a letter and sends a POST request to
 http://0.0.0.:5000/search_user with the letter as a  parameter
 """
 import requests
-import json
 import sys
 
 
@@ -19,7 +18,7 @@ if __name__ == "__main__":
     res = requests.post(url, data={"q": letter})
     try:
         res_json = res.json()
-    except json.JSONDecodeError:
+    except:
         print("Not a valid JSON")
     else:
         if len(res_json) == 0:
