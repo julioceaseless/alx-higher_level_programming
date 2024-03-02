@@ -5,7 +5,7 @@ GitHub Api to display your id
 """
 import requests
 from requests.auth import HTTPBasicAuth
-import sysy
+import sys
 
 
 if __name__ == "__main__":
