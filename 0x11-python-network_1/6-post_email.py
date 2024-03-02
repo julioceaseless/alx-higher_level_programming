@@ -7,6 +7,7 @@ response
 import requests
 import sys
 
+
 if __name__ == "__main__":
     """ execute script only when run directly"""
     url = sys.argv[1]
