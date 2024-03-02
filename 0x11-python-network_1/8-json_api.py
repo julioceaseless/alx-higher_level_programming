@@ -15,10 +15,11 @@ if __name__ == "__main__":
         exit(1)
 
     letter = sys.argv[1]
-    res = requests.post(url, data={"q": letter})
+    my_obj = {"q": letter}
+    res = requests.post(url, data=my_obj)
     try:
         res_json = res.json()
-    except:
+    except requests.exceptions.JSONDecodeError as JSONError:
         print("Not a valid JSON")
     else:
         if len(res_json) == 0:
