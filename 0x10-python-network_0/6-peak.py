@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Algorithm to find a peak in a list.
 Peak: an element in the list of integers that is greater
