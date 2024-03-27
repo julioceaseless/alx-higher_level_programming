@@ -5,7 +5,7 @@ const request = require('request');
 
 /* declare constants */
 const URL_FILM = 'https://swapi-api.alx-tools.com/api/films/';
-const MOVIE_ID = 3;
+const MOVIE_ID = process.argv[2];
 
 /* retrieve film */
 request(URL_FILM, { json: true }, (err, res, body) => {
