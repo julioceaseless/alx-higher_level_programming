@@ -4,7 +4,7 @@ $(document).ready(function() {
   redHeaderDiv.click(function() {
     const headerElem = $('header');
     if (headerElem) {
-      headerElement.addClass('red');
+      headerElem.addClass('red');
     } else {
       console.error('Header elemnet not found');
     }
