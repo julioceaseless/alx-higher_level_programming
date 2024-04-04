@@ -4,7 +4,7 @@
  * the value of hello from that fetch in the HTML tag DIV#hello.
  */
 $.ajax({
-  url: 'https://fourtonfish.com/hellosalut/?lang=fr',
+  url: 'https://hellosalut.stefanbohacek.dev/?lang=fr',
   method: 'GET',
   dataType: 'json',
   success: function (data) {

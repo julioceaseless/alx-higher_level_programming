@@ -3,7 +3,7 @@
  * movies by using API URL
  */
 $.ajax({
-  url: 'https://swapi-api.alx-tools.com/api/people/5/?format=json',
+  url: 'https://swapi-api.alx-tools.com/api/films/?format=json',
   method: 'GET',
   datatype: 'json',
   success: function (data) {

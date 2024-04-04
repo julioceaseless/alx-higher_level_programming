@@ -6,7 +6,7 @@ $(document).ready(function () {
     const headerElem = $('header');
     /* change color if element found */
     if (headerElem) {
-      headerElem.addClass('red');
+      headerElem.css('color', 'red');
     } else {
       console.error('Header elemnet not found');
     }
