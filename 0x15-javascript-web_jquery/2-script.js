@@ -1,9 +1,9 @@
 /* jQuery script to update text color of header */
-$(document).ready(function() {
+$(document).ready(function () {
   const redHeaderDiv = $('DIV#red_header');
-  redHeaderDiv.click(function() {
+  redHeaderDiv.click(function () {
     /* find the header */
-    const headerElem= $('header');
+    const headerElem = $('header');
     /* change color if element found */
     if (headerElem) {
       headerElem.addClass('red');
